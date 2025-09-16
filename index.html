@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting</title>
+  <script>
+    window.onload = function() {
+      const sites = [
+        "https://docs.google.com/presentation/d/1GWZqnol0MwXoTCMz8Uw9DIhnusDngw9h0-X4XVjBpiQ/edit?slide=id.g37f59dfbe05_0_10#slide=id.g37f59dfbe05_0_10",
+        "docs.google.com/presentation/d/1GWZqnol0MwXoTCMz8Uw9DIhnusDngw9h0-X4XVjBpiQ/present?slide=id.g37f59dfbe05_0_6"
+      ];
+      
+      // Pick a random index (0 or 1)
+      const randomIndex = Math.floor(Math.random() * sites.length);
+
+      // Redirect to chosen site
+      window.location.href = sites[randomIndex];
+    };
+  </script>
+</head>
+<body>
+  <p>If you are not redirected automatically, <a id="redirectLink" href="#">click here</a>.</p>
+  <script>
+    document.getElementById("redirectLink").href = sites ? sites[Math.floor(Math.random() * sites.length)] : "#";
+  </script>
+</body>
+</html>
