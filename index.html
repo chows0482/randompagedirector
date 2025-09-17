@@ -24,7 +24,7 @@
   <p id="log">Log</p>
   <p>If you are not redirected automatically, <a id="redirectLink" href="#">click here</a>.</p>
   <script>
-    document.querySelector('#log').textContent =
+    document.querySelector('#log').textContent = sites
     document.getElementById("redirectLink").href = sites ? sites[Math.floor(Math.random() * sites.length)] : "#";
   </script>
 </body>
