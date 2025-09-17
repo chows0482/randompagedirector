@@ -6,7 +6,7 @@
   <script>
     window.onload = function() {
       const searchParams = window.location.search;
-      const actualParams = new URLSearchParams(queryString);
+      const actualParams = new URLSearchParams(searchParams);
       const sites = [
             actualParams.get('one'),
             actualParams.get('two')
