@@ -12,17 +12,14 @@
             actualParams.get('two')
       ];
       
-      // Pick a random index (0 or 1)
       const randomIndex = Math.floor(Math.random() * sites.length);
 
-      // Redirect to chosen site
       window.location.href = sites[randomIndex];
     };
   </script>
 </head>
 <body>
-  <p id="log">Log</p>
-  <p>If you are not redirected automatically, <a id="redirectLink" href="#">click here</a>.</p>
+  <p>If you are not redirected automatically in a few seconds, <a id="redirectLink" href="#">click here</a>.</p>
   <script>
     document.querySelector('#log').textContent = sites
     document.getElementById("redirectLink").href = sites ? sites[Math.floor(Math.random() * sites.length)] : "#";
